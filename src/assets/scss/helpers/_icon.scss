@@ -1,0 +1,15 @@
+.menu-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: top;
+  color: map-get($theme-colors, dark-green);
+  margin-right: 12px;
+}
+
+.menu-icon-arrow {
+  float: right;
+  width: 14px;
+  height: 14px;
+  margin-top: 4px;
+  transition: all 0.5s;
+}

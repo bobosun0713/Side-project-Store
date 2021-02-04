@@ -1,18 +1,33 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="admin">
+    <admin-header></admin-header>
+    <side-menu></side-menu>
+    <div class="admin-container">
+      <router-view></router-view>
+    </div>
+    <!-- <bread-crumbs></bread-crumbs> -->
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import AdminHeader from '@/components/layout/Header.vue'
+import SideMenu from '@/components/layout/aside/SideMenu.vue'
+// import BreadCrumbs from '@/components/layout/BreadCrumbs.vue'
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    HelloWorld
-  }
-};
+    AdminHeader,
+    SideMenu,
+    // BreadCrumbs,
+  },
+}
 </script>
+
+<style lang="scss" scoped>
+.admin {
+  &-container {
+    padding: 25px;
+    margin-left: 200px;
+  }
+}
+</style>
