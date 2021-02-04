@@ -9,6 +9,9 @@ import '@/assets/scss/main.scss'
 // 引入fontawesome
 import '@/plugin/fontawesome.js'
 
+// 引入 element
+import '@/plugin/element.js'
+
 Vue.config.productionTip = false
 
 new Vue({

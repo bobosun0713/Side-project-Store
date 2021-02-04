@@ -1,14 +1,15 @@
 <template>
   <div class="order-list">
-    <template>
-      <el-table :data="orderData" border style="width: 100%">
-        <el-table-column prop="date" label="日期" width="180">
-        </el-table-column>
-        <el-table-column prop="name" label="姓名" width="180">
-        </el-table-column>
-        <el-table-column prop="address" label="地址"> </el-table-column>
-      </el-table>
-    </template>
+    <el-table :data="orderData" border style="width: 100%" class="table">
+      <el-table-column prop="date" label="商品編號" width="180">
+      </el-table-column>
+      <el-table-column prop="name" label="商品價錢" width="180">
+      </el-table-column>
+      <el-table-column prop="name" label="商品數量" width="180">
+      </el-table-column>
+      <el-table-column prop="address" label="商品價錢"> </el-table-column>
+      <el-table-column prop="address" label="操作"> </el-table-column>
+    </el-table>
   </div>
 </template>
 
@@ -38,6 +39,11 @@ export default {
           name: '王小虎',
           address: '上海市普陀区金沙江路 1516 弄',
         },
+        {
+          date: '2016-05-03',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1516 弄',
+        },
       ],
     }
   },
@@ -46,7 +52,13 @@ export default {
 
 <style lang="scss" scoped>
 .order-list {
-  border: 1px solid red;
-  padding: 15px;
+  //   border: 1px solid red;
+  background-color: map-get($theme-colors, light);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 7px map-get($theme-colors, shadow);
+}
+.table {
+  //   border: 1px solid red;
 }
 </style>
